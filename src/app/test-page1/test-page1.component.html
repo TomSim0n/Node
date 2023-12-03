@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <label class="col-4">text bind <code
+      ngNonBindable>{{numberValue}}</code></label>
+    <div class="col-2">numberValue: {{numberValue}}</div>
+  </div>
+  <div class="row">
+    <label class="col-4">button (click)="onClickIncrementValue()"</label>
+    <button class="col-2 btn btn-outline-primary" type="button"
+            (click)="onClickIncrementValue()">Increment</button>
+  </div>
+  <div class="row">
+    <label class="col-4">input disabled="true"
+      [value]="numberValue"</label>
+    <input class="col-2" disabled="true" [value]="numberValue">
+  </div>
+  <div class="row">
+    <label class="col-4">input [value]="numberValue"
+      (input)="onInputChanged($event)"</label>
+    <input class="col-2" [value]="numberValue"
+           (input)="onInputChanged($event)">
+  </div>
+  <div class="row">
+    <label class="col-4">input [(ngModel)]="numberValue"</label>
+    <input class="col-2" type="number" [(ngModel)]="numberValue">
+  </div>
+</div>
